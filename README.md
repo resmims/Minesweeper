@@ -1,20 +1,22 @@
-Enviroment - Windows  
+Welcome to the Minesweeper wiki!
+
+Environment - Windows  
 Language used - Java
 
-**How to run the App ?**  
-  Run the Minesweeper.java class ,it will prompt the user to input the grid size and mine count. System will validate both inputs and diplay the error message if it is invalid .
+**How to run the App?**  
+  Run the Minesweeper.java class, it will prompt the user to input the grid size and mine count. System will validate both inputs and diplay the error message if it is invalid.
   
-  If inputs are valid ( eg : grid size =4 , minecount =3 ) system will create the grid and place mines at random places and diplay the game grid to the user and ask them to input their choice of the cell to be revealed through a command line interface. 
+  If inputs are valid ( eg : grid size =4, mine count =3) system will create the grid and place mines at random places and display the game grid to the user and ask them to input their choice of the cell to be revealed through a command line interface. 
 
-  user can input their choice in the format 'A1' (point to grid index 00),'A2' (point to grid index 01),'B1'(point to grid index 10) ,'B2' (point to grid index 11) etc 
+  user can input their choice in the format 'A1' (point to grid index 00),'A2' (point to grid index 01),'B1'(point to grid index 10),'B2' (point to grid index 11) etc. 
 
-  - If the selected cell contains a mine, the game is over and the user loses. 
+  - If the selected cell contains a mine, the game is over, and the user loses. 
   - Otherwise, the selected cell is uncovered and reveals a number indicating how many of its adjacent squares contain mines. 
   - If an uncovered cell has no adjacent mines, the program will automatically uncover all adjacent squares until it reaches squares that do have adjacent mines. 
 
 - The game is won when all non-mine squares have been uncovered.
 
-- updated grid will be diaplayed after each input .
+- updated grid will be displayed after each input .
 
 **Assumptions**  
    Grid  min size is 2 and max size 26.  
@@ -37,7 +39,7 @@ Language used - Java
 •	calculateAdjacentMines(): For each cell, counts how many mines are in adjacent cells and stores that number.
 
 2 . Cell Reveal  
-•	reveal(Position position): Reveals a cell. If it’s a mine, the game is lost. If it’s empty (no adjacent mines), it auto-reveals all connected empty cells using queue based search algoritham.
+•	reveal(Position position): Reveals a cell. If it’s a mine, the game is lost. If it’s empty (no adjacent mines), it auto-reveals all connected empty cells using queue based search algorithm.
 
 3 . Auto-Reveal Algorithm   
 •	revealAdjacentCells(Position position, Cell[][] grid): Uses a queue to reveal all connected empty cells (cells with zero adjacent mines) and their neighbors, stopping at cells next to mines.
